@@ -1,24 +1,45 @@
 #User function Template for python3
 
 class Solution:
-    def segregate0and1(self, arr, n):
+    def segregate0and1(self, arr):
         # code here
+        lst=[]
+        for num in arr:
+            lst.append(num)
+            
+        lst.sort()
         
-        return arr.sort()
+        for i in range(len(arr)):
+            arr[i]=lst[i]
+        return arr
 
 
 #{ 
  # Driver Code Starts
-#Initial Template for Python 3
+class IntArray:
 
-if __name__ == '__main__':
-    tc = int(input())
-    while tc > 0:
-        n = int(input())
+    def __init__(self) -> None:
+        pass
+
+    def Input(self, n):
+        arr = [int(i) for i in input().strip().split()]  #array input
+        return arr
+
+    def Print(self, arr):
+        for i in arr:
+            print(i, end=" ")
+        print()
+
+
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+
         arr = list(map(int, input().strip().split()))
-        ob = Solution()
-        ob.segregate0and1(arr, n)
+
+        obj = Solution()
+        obj.segregate0and1(arr)
+
         print(*arr)
-        tc -= 1
 
 # } Driver Code Ends
