@@ -5,7 +5,10 @@ import math
 class Solution:
     def floorSqrt(self, n): 
     #Your code here
-        return math.floor(math.sqrt(n))
+        sqrt=math.sqrt(n)
+        num=int(math.floor(sqrt))
+        return num
+    
 
 
 #{ 
@@ -24,6 +27,8 @@ def main():
         print(Solution().floorSqrt(x))
 
         T -= 1
+
+        print("~")
 
 
 if __name__ == "__main__":
